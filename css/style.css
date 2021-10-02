@@ -1,0 +1,101 @@
+.wrapper {
+  max-width: 900px;
+  padding: 0 16px 0 16px;
+  margin: auto;
+}
+
+.button {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  cursor: pointer;
+}
+.button:active {
+  transform: scale(0.9);
+}
+
+#play {
+  background-image: url("./../img/play.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#pause {
+  background-image: url("./../img/pause.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#backward {
+  background-image: url("./../img/-10.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#forward {
+  background-image: url("./../img/+10.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.player {
+  top: 50px;
+  position: relative;
+}
+.player .player-title {
+  position: absolute;
+  inset: 0;
+  inset: 12px 0 0 12px;
+  color: #edf5fc;
+  font: normal 500 0.75rem/0.9rem "Poppins", sans-serif;
+}
+@media (min-width: 540px) {
+  .player .player-title {
+    font: normal 500 1.0625rem/1.275rem "Poppins", sans-serif;
+  }
+}
+@media (min-width: 768px) {
+  .player .player-title {
+    inset: 19.5px 0 0 19.5px;
+  }
+}
+.player .player-actions {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.player .player-progress {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline: 0;
+  display: flex;
+  padding: 10px;
+}
+.player .player-progress input {
+  flex: 1;
+}
+.player .player-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 0.5s opacity;
+}
+.player .player-overlay:hover {
+  opacity: 1;
+}
+
+.player video {
+  width: 100%;
+  vertical-align: middle;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+body {
+  background: #43dde6;
+}
+
+/*# sourceMappingURL=style.css.map */

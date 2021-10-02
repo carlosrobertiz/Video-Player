@@ -1,0 +1,56 @@
+.player {
+	top: 50px;
+	position: relative;
+	.player-title {
+		position: absolute;
+		inset: 0;
+		inset: 12px 0 0 12px;
+		color: $colorLetters;
+		font: $bodyMovil;
+		@media (min-width: 540px) {
+			font: $bodyDesktop;
+		}
+		@media (min-width: 768px) {
+			inset: 19.5px 0 0 19.5px;
+		}
+	}
+
+	.player-actions {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+	}
+
+	.player-progress {
+		position: absolute;
+		inset-block-end: 0;
+		inset-inline: 0;
+		display: flex;
+		padding: 10px;
+	}
+
+	.player-progress input {
+		flex: 1;
+	}
+
+	.player-overlay {
+		position: absolute;
+		inset: 0;
+		opacity: 0;
+		transition: 0.5s opacity;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.player video {
+	width: 100%;
+	vertical-align: middle;
+	//Para que la imagen tome toda la proporcion de 16/9
+	object-fit: cover;
+	aspect-ratio: 16/9;
+}

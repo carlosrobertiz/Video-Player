@@ -1,0 +1,31 @@
+.button {
+	width: 32px;
+	height: 32px;
+	background: transparent;
+	cursor: pointer;
+	&:active {
+		transform: scale(0.9);
+	}
+}
+
+@mixin buttons-image($url: url('./../img/play.svg')) {
+	background-image: $url;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#play {
+	@include buttons-image();
+}
+
+#pause {
+	@include buttons-image(url('./../img/pause.svg'));
+}
+
+#backward {
+	@include buttons-image(url('./../img/-10.svg'));
+}
+
+#forward {
+	@include buttons-image(url('./../img/+10.svg'));
+}
